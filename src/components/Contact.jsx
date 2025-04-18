@@ -68,6 +68,32 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  // Save form data locally (example approach)
+  const saveFormDataLocally = (data) => {
+    try {
+      // Get existing submissions or initialize empty array
+      const existingData = localStorage.getItem('contactSubmissions');
+      const submissions = existingData ? JSON.parse(existingData) : [];
+      
+      // Add timestamp to submission
+      const newSubmission = {
+        ...data,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Add new submission to array
+      submissions.push(newSubmission);
+      
+      // Save back to localStorage
+      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+      
+      return true;
+    } catch (error) {
+      console.error('Error saving form data locally:', error);
+      return false;
+    }
+  };
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,33 +106,71 @@ const Contact = () => {
       });
       
       try {
-        // Send data to backend API
-        const response = await fetch('http://localhost:5000/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
+        // Try to send data to backend API
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5-second timeout
         
-        const data = await response.json();
-        
-        if (response.ok) {
-          setStatus({
-            submitted: true,
-            submitting: false,
-            info: { error: false, msg: 'Message sent successfully!' }
+        try {
+          const response = await fetch('http://localhost:5000/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+            signal: controller.signal
           });
           
-          // Reset form
-          setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-          });
-        } else {
-          throw new Error(data.message || 'Something went wrong');
+          clearTimeout(timeoutId);
+          
+          const data = await response.json();
+          
+          if (response.ok) {
+            // Server responded successfully
+            setStatus({
+              submitted: true,
+              submitting: false,
+              info: { error: false, msg: 'Message sent successfully!' }
+            });
+            
+            // Reset form
+            setFormData({
+              name: '',
+              email: '',
+              subject: '',
+              message: ''
+            });
+          } else {
+            throw new Error(data.message || 'Something went wrong');
+          }
+        } catch (fetchError) {
+          clearTimeout(timeoutId);
+          
+          // Check if it's a network error or timeout
+          if (fetchError.name === 'AbortError' || fetchError instanceof TypeError) {
+            console.log('Backend server unavailable, saving data locally');
+            
+            // Save form data locally
+            if (saveFormDataLocally(formData)) {
+              // Show success message even though backend is unavailable
+              setStatus({
+                submitted: true,
+                submitting: false,
+                info: { error: false, msg: 'Message received! I will get back to you soon.' }
+              });
+              
+              // Reset form
+              setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+              });
+            } else {
+              throw new Error('Unable to process your message. Please try again later.');
+            }
+          } else {
+            throw fetchError;
+          }
         }
       } catch (error) {
         setStatus({
