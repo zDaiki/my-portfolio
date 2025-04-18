@@ -3,7 +3,7 @@ import todo from '../assets/todo.png'
 import weather from '../assets/weather.png'
 import product from '../assets/product.png'
 import bookstore from '../assets/bookstore.png'
-import movie from '../assets/movie.png'
+import movie from '../assets/Movie.png'
 
 const Projects = () => {
   const projects = [
