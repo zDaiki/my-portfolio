@@ -4,6 +4,7 @@ import weather from '../assets/weather.png'
 import product from '../assets/product.png'
 import bookstore from '../assets/bookstore.png'
 import movie from '../assets/Movie.png'
+import Gym from '../assets/gym.png'
 
 const Projects = () => {
   const projects = [
@@ -46,6 +47,14 @@ const Projects = () => {
       description: 'Book Recommendation System is a web-based application designed to help users discover books based on their preferences and interests. It analyzes key attributes such as book descriptions, authors, and genres to suggest similar titles, enhancing the users reading experience.',
       technologies: ['Php', 'HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/zDaiki/bookstore',
+    },
+    {
+      id: 6,
+      title: 'Gym Website',
+      image: Gym,
+      description: 'BakiFitness is a responsive gym website built with PHP and MySQL, featuring dynamic pages for trainers, class schedules, pricing plans, and a secure admin panel. It includes a contact form, CRUD operations, and mobile-friendly design using Bootstrap..',
+      technologies: ['Php', 'HTML', 'CSS', 'JavaScript'],
+      link: 'https://github.com/zDaiki/gym-website',
     }
   ];
   
