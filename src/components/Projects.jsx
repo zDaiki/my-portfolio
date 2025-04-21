@@ -52,7 +52,7 @@ const Projects = () => {
       id: 6,
       title: 'Gym Website',
       image: Gym,
-      description: 'BakiFitness is a responsive gym website built with PHP and MySQL, featuring dynamic pages for trainers, class schedules, pricing plans, and a secure admin panel. It includes a contact form, CRUD operations, and mobile-friendly design using Bootstrap..',
+      description: 'BakiFitness is a responsive gym website built with PHP and MySQL, featuring dynamic pages for trainers, class schedules, pricing plans, and a secure admin panel. It includes a contact form, CRUD operations, and mobile-friendly design using Bootstrap.',
       technologies: ['Php', 'HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/zDaiki/gym-website',
     }
