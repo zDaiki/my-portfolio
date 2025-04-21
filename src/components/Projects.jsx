@@ -45,7 +45,7 @@ const Projects = () => {
       image: bookstore,
       description: 'Book Recommendation System is a web-based application designed to help users discover books based on their preferences and interests. It analyzes key attributes such as book descriptions, authors, and genres to suggest similar titles, enhancing the users reading experience.',
       technologies: ['Php', 'HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/zDaiki/Book-recommendation-system',
+      link: 'https://github.com/zDaiki/bookstore',
     }
   ];
   
