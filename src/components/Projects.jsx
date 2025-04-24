@@ -5,6 +5,7 @@ import product from '../assets/product.png'
 import bookstore from '../assets/bookstore.png'
 import movie from '../assets/Movie.png'
 import Gym from '../assets/gym.png'
+import expense from '../assets/expense.png'
 
 const Projects = () => {
   const projects = [
@@ -55,6 +56,14 @@ const Projects = () => {
       description: 'BakiFitness is a responsive gym website built with PHP and MySQL, featuring dynamic pages for trainers, class schedules, pricing plans, and a secure admin panel. It includes a contact form, CRUD operations, and mobile-friendly design using Bootstrap.',
       technologies: ['Php', 'HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/zDaiki/gym-website',
+    },
+    {
+      id: 7,
+      title: 'Expense Tracker',
+      image: expense,
+      description: 'Expense tracker to record and categorize your daily spending.Gain insights into your financial habits and take control of your budget effortlessly.',
+      technologies: ['Angular', 'TypeScript', 'SCSS'],
+      link: 'https://github.com/zDaiki/Expense-Tracker',
     }
   ];
   
