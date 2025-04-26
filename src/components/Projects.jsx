@@ -63,7 +63,7 @@ const Projects = () => {
       image: expense,
       description: 'Expense tracker to record and categorize your daily spending.Gain insights into your financial habits and take control of your budget effortlessly.',
       technologies: ['Angular', 'TypeScript', 'SCSS'],
-      link: 'https://github.com/zDaiki/Expense-Tracker',
+      link: 'https://zexpensetracker.netlify.app/login',
     }
   ];
   
