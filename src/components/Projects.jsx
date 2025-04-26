@@ -6,6 +6,7 @@ import bookstore from '../assets/bookstore.png'
 import movie from '../assets/Movie.png'
 import Gym from '../assets/gym.png'
 import expense from '../assets/expense.png'
+import expensetracker from '../assets/expensetracker.png'
 
 const Projects = () => {
   const projects = [
@@ -60,10 +61,10 @@ const Projects = () => {
     {
       id: 7,
       title: 'Expense Tracker',
-      image: expense,
+      image: expensetracker,
       description: 'Expense tracker to record and categorize your daily spending.Gain insights into your financial habits and take control of your budget effortlessly.',
       technologies: ['Angular', 'TypeScript', 'SCSS'],
-      link: 'https://zexpensetracker.netlify.app/login',
+      link: 'https://zexpensetracker.netlify.app',
     }
   ];
   
