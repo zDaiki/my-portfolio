@@ -108,7 +108,7 @@ const Contact = () => {
       try {
         // Try to send data to backend API
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5-second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // 5-second timeout
         
         try {
           const response = await fetch('https://backend-portfolio-6rlo.onrender.com/api/contact', {
