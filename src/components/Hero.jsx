@@ -27,7 +27,7 @@ const Hero = () => {
               Hi, I'm <span className="text-primary">Bishal Maharjan</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 font-semibold mb-6">
-              Frontend Developer
+              Web Developer
             </h2>
             <p className="text-lg text-gray-700 mb-8 max-w-xl">
               I craft responsive, engaging web experiences using modern tech stacks that help businesses achieve their digital goals.
@@ -40,7 +40,7 @@ const Hero = () => {
                 View Work
               </button>
               <a 
-                href="/bishal--Resume.pdf" 
+                href="/bishal_Maharjan_resume.pdf" 
                 download="bishalResume.pdf"
                 className="px-6 py-3 rounded-full bg-primary text-white font-semibold shadow-md hover:bg-primary/70 transition"
               >

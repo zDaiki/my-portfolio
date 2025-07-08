@@ -7,6 +7,7 @@ import movie from '../assets/Movie.png'
 import Gym from '../assets/gym.png'
 import expense from '../assets/expense.png'
 import expensetracker from '../assets/expensetracker.png'
+import ticket from '../assets/ticket.png'
 
 const Projects = () => {
   const projects = [
@@ -65,6 +66,14 @@ const Projects = () => {
       description: 'Expense tracker to record and categorize your daily spending.Gain insights into your financial habits and take control of your budget effortlessly.',
       technologies: ['Angular', 'TypeScript', 'SCSS'],
       link: 'https://zexpensetracker.netlify.app',
+    },
+    {
+      id: 8,
+      title: 'Movie-Ticket Booking Website',
+      image: ticket,
+      description: 'Movie Ticket booking made using MERN stack where user can login and book ticket along with seats and esewa payment integration',
+      technologies: ['React', 'Expressjs', 'MongoDB', 'Nodejs' ],
+      link: 'https://movie-show-zeta.vercel.app/',
     }
   ];
   
