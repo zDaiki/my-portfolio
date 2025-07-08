@@ -111,7 +111,7 @@ const Contact = () => {
         const timeoutId = setTimeout(() => controller.abort(), 10000); // 5-second timeout
         
         try {
-          const response = await fetch('https://backend-portfolio-tawny-rho.vercel.app/', {
+          const response = await fetch('https://backend-portfolio-tawny-rho.vercel.app/api/contact', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
