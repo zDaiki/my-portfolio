@@ -8,43 +8,21 @@ import Gym from '../assets/gym.png'
 import expense from '../assets/expense.png'
 import expensetracker from '../assets/expensetracker.png'
 import ticket from '../assets/ticket.png'
+import auth from '../assets/auth.png'
+
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'To-Do App',
-      image: todo,
-      description: 'A dynamic task management app leveraging React hooks (useState, useEffect) for seamless state management.',
-      technologies: ['React', 'javaScript', 'CSS'],
-      link: 'https://daiki-todo-app.netlify.app/',
+      title: 'Movie-Ticket Booking Website',
+      image: ticket,
+      description: 'Movie Ticket booking made using MERN stack where user can login and book ticket along with seats and esewa payment integration',
+      technologies: ['React', 'Expressjs', 'MongoDB', 'Nodejs' ],
+      link: 'https://movie-show-zeta.vercel.app/',
     },
     {
       id: 2,
-      title: 'E-commerce Product Catalog',
-      image: product,
-      description: 'An interactive product browsing system with real-time cart updates and responsive UI.',
-      technologies: ['React', 'javaScript', 'Tailwindcss'],
-      link: 'https://daiki-product-catalog.netlify.app/',
-    },
-    {
-      id: 3,
-      title: 'React Weather App',
-      image: weather,
-      description: 'Integrated an external API to fetch real-time weather data, enhancing user experience with modern UI/UX design.',
-      technologies: ['React', 'javaScript', 'Tailwind CSS'],
-      link: 'https://daiki-weather-app.netlify.app/',
-    },
-    {
-      id: 4,
-      title: 'Movie Website',
-      image: movie,
-      description: 'A movie discovery platform built with React and Tailwind CSS, offering a smooth, user-friendly experience. From new releases to top-rated films and hidden gems, find everything in one place!',
-      technologies: ['React', 'javaScript', 'Tailwind CSS'],
-      link: 'https://daikimovies.netlify.app/',
-    },
-    {
-      id: 5,
       title: 'Book Recommendation System',
       image: bookstore,
       description: 'Book Recommendation System is a web-based application designed to help users discover books based on their preferences and interests. It analyzes key attributes such as book descriptions, authors, and genres to suggest similar titles, enhancing the users reading experience.',
@@ -52,7 +30,49 @@ const Projects = () => {
       link: 'https://github.com/zDaiki/bookstore',
     },
     {
+      id: 3,
+      title: 'Authentication System',
+      image: auth,
+      description: 'Authentication system using MERN stack where user can Register, login, verify email and receive emails and OTP.',
+      technologies: ['React', 'Expressjs', 'MongoDB', 'Nodejs' ],
+      link: 'https://mern-auth-theta-red.vercel.app/login',
+    },
+    {
+      id: 4,
+      title: 'Expense Tracker',
+      image: expensetracker,
+      description: 'Expense tracker to record and categorize your daily spending.Gain insights into your financial habits and take control of your budget effortlessly.',
+      technologies: ['Angular', 'TypeScript', 'SCSS'],
+      link: 'https://zexpensetracker.netlify.app',
+    },
+    
+    {
+      id: 5,
+      title: 'E-commerce Product Catalog',
+      image: product,
+      description: 'An interactive product browsing system with real-time cart updates and responsive UI.',
+      technologies: ['React', 'javaScript', 'Tailwindcss'],
+      link: 'https://daiki-product-catalog.netlify.app/',
+    },
+    {
       id: 6,
+      title: 'React Weather App',
+      image: weather,
+      description: 'Integrated an external API to fetch real-time weather data, enhancing user experience with modern UI/UX design.',
+      technologies: ['React', 'javaScript', 'Tailwind CSS'],
+      link: 'https://daiki-weather-app.netlify.app/',
+    },
+    {
+      id: 7,
+      title: 'Movie Website',
+      image: movie,
+      description: 'A movie discovery platform built with React and Tailwind CSS, offering a smooth, user-friendly experience. From new releases to top-rated films and hidden gems, find everything in one place!',
+      technologies: ['React', 'javaScript', 'Tailwind CSS'],
+      link: 'https://daikimovies.netlify.app/',
+    },
+    
+    {
+      id: 8,
       title: 'Gym Website',
       image: Gym,
       description: 'BakiFitness is a responsive gym website built with PHP and MySQL, featuring dynamic pages for trainers, class schedules, pricing plans, and a secure admin panel. It includes a contact form, CRUD operations, and mobile-friendly design using Bootstrap.',
@@ -60,21 +80,15 @@ const Projects = () => {
       link: 'https://github.com/zDaiki/gym-website',
     },
     {
-      id: 7,
-      title: 'Expense Tracker',
-      image: expensetracker,
-      description: 'Expense tracker to record and categorize your daily spending.Gain insights into your financial habits and take control of your budget effortlessly.',
-      technologies: ['Angular', 'TypeScript', 'SCSS'],
-      link: 'https://zexpensetracker.netlify.app',
-    },
-    {
-      id: 8,
-      title: 'Movie-Ticket Booking Website',
-      image: ticket,
-      description: 'Movie Ticket booking made using MERN stack where user can login and book ticket along with seats and esewa payment integration',
-      technologies: ['React', 'Expressjs', 'MongoDB', 'Nodejs' ],
-      link: 'https://movie-show-zeta.vercel.app/',
+      id: 9,
+      title: 'To-Do App',
+      image: todo,
+      description: 'A dynamic task management app leveraging React hooks (useState, useEffect) for seamless state management.',
+      technologies: ['React', 'javaScript', 'CSS'],
+      link: 'https://daiki-todo-app.netlify.app/',
     }
+    
+    
   ];
   
   return (
